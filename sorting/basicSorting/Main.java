@@ -10,7 +10,10 @@ public class Main {
             arr[i] = sc.nextInt();
         }
 
-        InsertionSort is = new InsertionSort();
-        System.out.println(Arrays.toString(is.insertionSort(arr)));
+//        InsertionSort is = new InsertionSort();
+//        System.out.println(Arrays.toString(is.insertionSort(arr)));
+
+        BubbleSort bs = new BubbleSort();
+        System.out.println(Arrays.toString(bs.bubbleSort(arr)));
     }
 }

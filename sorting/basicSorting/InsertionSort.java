@@ -1,5 +1,10 @@
 package basicSorting;
 
+import basicSorting.util.Operations;
+
+//Taking the ith index as mini and comparing it with all the next elements until we find the minimum number
+//Best, average and worst case - O(n^2)
+
 public class InsertionSort {
     public int[] insertionSort(int[] arr) {
         for (int i = 0; i < arr.length-1; i++) {
@@ -9,14 +14,8 @@ public class InsertionSort {
                     minIndex = j;
                 }
             }
-            swap(minIndex, i, arr);
+            Operations.swap(minIndex, i, arr);
         }
         return arr;
-    }
-
-    public void swap(int a, int b, int[] arr) {
-        int temp = arr[a];
-        arr[a] = arr[b];
-        arr[b] = temp;
     }
 }
