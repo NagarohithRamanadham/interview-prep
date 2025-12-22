@@ -1,3 +1,4 @@
+import advancedSorting.MergeSort;
 import basicSorting.SelectionSort;
 
 import java.util.Arrays;
@@ -17,7 +18,10 @@ public class Main {
 //        BubbleSort bs = new BubbleSort();
 //        System.out.println(Arrays.toString(bs.bubbleSort(arr)));
 
-        SelectionSort ss = new SelectionSort();
-        System.out.println(Arrays.toString(ss.selectionSort(arr)));
+//        SelectionSort ss = new SelectionSort();
+//        System.out.println(Arrays.toString(ss.selectionSort(arr)));
+
+        MergeSort ms = new MergeSort();
+        System.out.println(Arrays.toString(ms.mergeSort(arr)));
     }
 }
