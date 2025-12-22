@@ -1,6 +1,6 @@
 package basicSorting;
 
-import basicSorting.util.Operations;
+import util.Operations;
 
 //Bubbling out the largest element
 //Worst and average - O(n^2) , best case - O(n)

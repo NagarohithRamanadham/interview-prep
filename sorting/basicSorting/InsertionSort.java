@@ -1,6 +1,6 @@
 package basicSorting;
 
-import basicSorting.util.Operations;
+import util.Operations;
 
 //Taking the ith index as mini and comparing it with all the next elements until we find the minimum number
 //Best, average and worst case - O(n^2)

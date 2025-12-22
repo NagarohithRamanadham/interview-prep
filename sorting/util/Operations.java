@@ -1,4 +1,4 @@
-package basicSorting.util;
+package util;
 
 public class Operations {
     public static void swap(int a, int b, int[] arr) {
