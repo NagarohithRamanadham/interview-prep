@@ -13,7 +13,10 @@ public class Main {
 //        InsertionSort is = new InsertionSort();
 //        System.out.println(Arrays.toString(is.insertionSort(arr)));
 
-        BubbleSort bs = new BubbleSort();
-        System.out.println(Arrays.toString(bs.bubbleSort(arr)));
+//        BubbleSort bs = new BubbleSort();
+//        System.out.println(Arrays.toString(bs.bubbleSort(arr)));
+
+        SelectionSort ss = new SelectionSort();
+        System.out.println(Arrays.toString(ss.selectionSort(arr)));
     }
 }

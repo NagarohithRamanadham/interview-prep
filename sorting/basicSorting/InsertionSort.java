@@ -1,9 +1,10 @@
+/*
+Taking the ith index as mini and comparing it with all the next elements until we find the minimum number
+Best, average and worst case - O(n^2)
+*/
 package basicSorting;
 
 import util.Operations;
-
-//Taking the ith index as mini and comparing it with all the next elements until we find the minimum number
-//Best, average and worst case - O(n^2)
 
 public class InsertionSort {
     public int[] insertionSort(int[] arr) {

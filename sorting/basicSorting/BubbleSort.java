@@ -1,9 +1,10 @@
+/*
+Bubbling out the largest element
+Worst and average - O(n^2) , best case - O(n)
+*/
 package basicSorting;
 
 import util.Operations;
-
-//Bubbling out the largest element
-//Worst and average - O(n^2) , best case - O(n)
 
 public class BubbleSort {
     public int[] bubbleSort(int[] arr) {
