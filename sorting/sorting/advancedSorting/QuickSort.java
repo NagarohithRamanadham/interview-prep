@@ -3,9 +3,9 @@ Time complexity is O(n log n) same as merge sort
 Space complexity is O(1) as we are not using any extra array or lists.
  */
 
-package advancedSorting;
+package sorting.advancedSorting;
 
-import util.Operations;
+import sorting.util.Operations;
 
 public class QuickSort {
     public int[] quickSort(int[] arr) {
