@@ -1,4 +1,5 @@
 import advancedSorting.MergeSort;
+import advancedSorting.QuickSort;
 import basicSorting.BubbleSort;
 import basicSorting.InsertionSort;
 import basicSorting.SelectionSort;
@@ -14,16 +15,20 @@ public class Main {
             arr[i] = sc.nextInt();
         }
 
-        InsertionSort is = new InsertionSort();
-        System.out.println("Insertion Sort: " + Arrays.toString(is.insertionSort(arr)));
+//        InsertionSort is = new InsertionSort();
+//        System.out.println("Insertion Sort: " + Arrays.toString(is.insertionSort(arr)));
 
-        BubbleSort bs = new BubbleSort();
-        System.out.println("Bubble Sort: " + Arrays.toString(bs.bubbleSort(arr)));
+//        BubbleSort bs = new BubbleSort();
+//        System.out.println("Bubble Sort: " + Arrays.toString(bs.bubbleSort(arr)));
+//
+//        SelectionSort ss = new SelectionSort();
+//        System.out.println("Selection Sort: " + Arrays.toString(ss.selectionSort(arr)));
+//
+//        MergeSort ms = new MergeSort();
+//        System.out.println("Merge Sort: " + Arrays.toString(ms.mergeSort(arr)));
 
-        SelectionSort ss = new SelectionSort();
-        System.out.println("Selection Sort: " + Arrays.toString(ss.selectionSort(arr)));
+        QuickSort qs = new QuickSort();
+        System.out.println("Quick Sort: " + Arrays.toString(qs.quickSort(arr)));
 
-        MergeSort ms = new MergeSort();
-        System.out.println("Merge Sort: " + Arrays.toString(ms.mergeSort(arr)));
     }
 }

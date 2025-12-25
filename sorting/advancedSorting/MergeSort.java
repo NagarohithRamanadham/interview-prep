@@ -1,3 +1,8 @@
+/*
+Time complexity = O(n * log n base 2) - because the recursion is breaking our problem into 2 all the time so the base will be 2.
+The n is multiplied as we are running a for loop to merge the array which at the worst case runs for n times.
+Space complexity will be at worst O(n)
+ */
 package advancedSorting;
 
 public class MergeSort {
