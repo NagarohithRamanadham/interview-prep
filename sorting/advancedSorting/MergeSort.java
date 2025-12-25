@@ -1,51 +1,53 @@
 package advancedSorting;
 
-import java.util.Arrays;
-
 public class MergeSort {
     public int[] mergeSort(int[] arr) {
-        return divide(arr);
+        divide(arr, 0, arr.length-1);
+        return arr;
     }
 
-    public int[] divide(int[] arr) {
-        if(arr.length<=1) {
-            return arr;
+    public void divide(int[] arr, int low, int high) {
+        if(high<=low) {
+            return;
         }
-        int[] left = Arrays.copyOfRange(arr, 0, arr.length/2);
-        int[] right = Arrays.copyOfRange(arr, arr.length/2, arr.length);
-        return merge(divide(left), divide(right));
+        int mid = (low+high)/2;
+        divide(arr, low, mid);
+        divide(arr, mid+1, high);
+        merge(arr, low, mid, high);
     }
 
-    public int[] merge(int[] left, int[] right) {
-        int[] arr = new int[left.length+right.length];
-        int arrCounter = 0;
-        int leftCounter = 0;
-        int rightCounter = 0;
+    public void merge(int[] arr, int low, int mid, int high) {
+        int[] temp = new int[high-low+1];
 
-        while(leftCounter<left.length && rightCounter < right.length) {
-            if(left[leftCounter] < right[rightCounter]) {
-                arr[arrCounter] = left[leftCounter];
-                leftCounter++;
+        int left = low;
+        int right = mid+1;
+        int tempCount = 0;
+        while(left<=mid && right<=high) {
+            if(arr[left] < arr[right]) {
+                temp[tempCount] = arr[left];
+                left++;
             }
             else {
-                arr[arrCounter] = right[rightCounter];
-                rightCounter++;
+                temp[tempCount] = arr[right];
+                right++;
             }
-            arrCounter++;
+            tempCount++;
         }
 
-        while(leftCounter<left.length) {
-            arr[arrCounter] = left[leftCounter];
-            leftCounter++;
-            arrCounter++;
+        while(left<=mid) {
+            temp[tempCount] = arr[left];
+            left++;
+            tempCount++;
         }
 
-        while(rightCounter<right.length) {
-            arr[arrCounter] = right[rightCounter];
-            rightCounter++;
-            arrCounter++;
+        while(right<=high) {
+            temp[tempCount] = arr[right];
+            right++;
+            tempCount++;
         }
 
-        return arr;
+        for(int i=low;i<=high;i++) {
+            arr[i] = temp[i-low];
+        }
     }
 }

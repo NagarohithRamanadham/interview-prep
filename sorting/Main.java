@@ -1,4 +1,6 @@
 import advancedSorting.MergeSort;
+import basicSorting.BubbleSort;
+import basicSorting.InsertionSort;
 import basicSorting.SelectionSort;
 
 import java.util.Arrays;
@@ -12,16 +14,16 @@ public class Main {
             arr[i] = sc.nextInt();
         }
 
-//        InsertionSort is = new InsertionSort();
-//        System.out.println(Arrays.toString(is.insertionSort(arr)));
+        InsertionSort is = new InsertionSort();
+        System.out.println("Insertion Sort: " + Arrays.toString(is.insertionSort(arr)));
 
-//        BubbleSort bs = new BubbleSort();
-//        System.out.println(Arrays.toString(bs.bubbleSort(arr)));
+        BubbleSort bs = new BubbleSort();
+        System.out.println("Bubble Sort: " + Arrays.toString(bs.bubbleSort(arr)));
 
-//        SelectionSort ss = new SelectionSort();
-//        System.out.println(Arrays.toString(ss.selectionSort(arr)));
+        SelectionSort ss = new SelectionSort();
+        System.out.println("Selection Sort: " + Arrays.toString(ss.selectionSort(arr)));
 
         MergeSort ms = new MergeSort();
-        System.out.println(Arrays.toString(ms.mergeSort(arr)));
+        System.out.println("Merge Sort: " + Arrays.toString(ms.mergeSort(arr)));
     }
 }
