@@ -2,9 +2,9 @@
 Bubbling out the largest element
 Worst and average - O(n^2) , best case - O(n)
 */
-package basicSorting;
+package sorting.basicSorting;
 
-import util.Operations;
+import sorting.util.Operations;
 
 public class BubbleSort {
     public int[] bubbleSort(int[] arr) {

@@ -1,8 +1,6 @@
-import advancedSorting.MergeSort;
-import advancedSorting.QuickSort;
-import basicSorting.BubbleSort;
-import basicSorting.InsertionSort;
-import basicSorting.SelectionSort;
+package sorting;
+
+import sorting.advancedSorting.QuickSort;
 
 import java.util.Arrays;
 import java.util.Scanner;

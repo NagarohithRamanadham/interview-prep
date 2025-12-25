@@ -2,9 +2,9 @@
 Taking the ith index as mini and comparing it with all the next elements until we find the minimum number
 Best, average and worst case - O(n^2)
 */
-package basicSorting;
+package sorting.basicSorting;
 
-import util.Operations;
+import sorting.util.Operations;
 
 public class InsertionSort {
     public int[] insertionSort(int[] arr) {
