@@ -2,6 +2,7 @@ package arrays;
 
 import arrays.easy.RemoveDuplicates;
 import arrays.easy.SecondLargest;
+import arrays.medium.RotateArray189;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -14,12 +15,6 @@ public class Main {
         for(int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
-
-        SecondLargest sl = new SecondLargest();
-        System.out.println("Second Largest number is: " + sl.secondLargest(arr));
-
-        RemoveDuplicates rd = new RemoveDuplicates();
-        System.out.println("After removing duplicates: " + Arrays.toString(rd.removeDuplicates(arr)));
 
     }
 }
