@@ -1,5 +1,6 @@
 package arrays;
 
+import arrays.easy.MoveZeros283;
 import arrays.easy.RemoveDuplicates;
 import arrays.easy.SecondLargest;
 import arrays.medium.RotateArray189;
@@ -9,12 +10,11 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int[] arr = new int[n];
-        for(int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
-        }
+        int[] arr = {0,1,0,3,12};
+
+        MoveZeros283 mz = new MoveZeros283();
+        mz.moveZeroes(arr);
+        System.out.println(Arrays.toString(arr));
 
     }
 }
