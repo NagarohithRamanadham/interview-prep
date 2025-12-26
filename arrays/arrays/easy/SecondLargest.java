@@ -14,7 +14,7 @@ public class SecondLargest {
                 secondLargest = largest;
                 largest = i;
             }
-            else if(i>secondLargest){
+            else if(i<largest && i>secondLargest){
                 secondLargest = i;
             }
         }

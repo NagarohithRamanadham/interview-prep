@@ -1,7 +1,9 @@
 package arrays;
 
+import arrays.easy.RemoveDuplicates;
 import arrays.easy.SecondLargest;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -15,5 +17,9 @@ public class Main {
 
         SecondLargest sl = new SecondLargest();
         System.out.println("Second Largest number is: " + sl.secondLargest(arr));
+
+        RemoveDuplicates rd = new RemoveDuplicates();
+        System.out.println("After removing duplicates: " + Arrays.toString(rd.removeDuplicates(arr)));
+
     }
 }
