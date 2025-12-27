@@ -27,4 +27,25 @@ public class MajorityElement169 {
         }
         return 0;
     }
+
+    public int majorityElementMooreVoting(int[] nums) {
+        int element = nums[0];
+        int count = 1;
+
+        for(int i: nums) {
+            if(count==0) {
+                element = i;
+            }
+            if(i==element) count++;
+            else count--;
+        }
+
+        int c = 0;
+        for(int i: nums) {
+            if(i==element) c++;
+        }
+
+        if(c>nums.length/2) return element;
+        return 0;
+    }
 }
