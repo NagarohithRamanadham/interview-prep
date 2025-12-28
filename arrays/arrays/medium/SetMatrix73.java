@@ -7,38 +7,16 @@ public class SetMatrix73 {
         for(int i=0;i<matrix.length;i++) {
             for(int j=0;j<matrix[i].length;j++) {
                 if(!visited[i][j] && matrix[i][j]==0) {
-                    int row = i;
-                    int col = j;
-
-                    while(row>0) {
-                        row--;
-                        if(matrix[row][col]!=0) {
-                            matrix[row][col] = 0;
-                            visited[row][col] = true;
+                    for (int k = 0; k < matrix.length; k++) {
+                        if (matrix[k][j] != 0) {
+                            matrix[k][j] = 0;
+                            visited[k][j] = true;
                         }
                     }
-                    row = i;
-                    while(col>0) {
-                        col--;
-                        if(matrix[row][col]!=0) {
-                            matrix[row][col] = 0;
-                            visited[row][col] = true;
-                        }
-                    }
-                    col = j;
-                    while(row<matrix.length-1) {
-                        row++;
-                        if(matrix[row][col]!=0) {
-                            matrix[row][col] = 0;
-                            visited[row][col] = true;
-                        }
-                    }
-                    row = i;
-                    while(col<matrix[i].length-1) {
-                        col++;
-                        if(matrix[row][col]!=0) {
-                            matrix[row][col] = 0;
-                            visited[row][col] = true;
+                    for (int k = 0; k < matrix[i].length; k++) {
+                        if (matrix[i][k] != 0) {
+                            matrix[i][k] = 0;
+                            visited[i][k] = true;
                         }
                     }
                 }
