@@ -17,6 +17,7 @@ public class Main {
 
         NextPerm31 n = new NextPerm31();
         System.out.println(Arrays.toString(n.nextPermutation(arr)));
-
+        
+        //test-pr
     }
 }
