@@ -1,8 +1,12 @@
 package arrays.medium;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class SubArray560 {
     public int subarraySum(int[] nums, int k) {
@@ -52,6 +56,27 @@ public class SubArray560 {
                 }
             }
         }
+        return count;
+    }
+
+    public int subarraySum2(int[] nums, int k) {
+        int count = 0;
+
+        Map<Integer, Integer> map = new HashMap<>();
+        int presum = 0;
+        for(int i=0;i<nums.length;i++) {
+            presum += nums[i];
+            if(presum==k) {
+                count++;
+            }
+
+            int compliment = presum-k;
+
+            if(map.containsKey(compliment)) count += map.get(compliment);
+
+            map.put(presum, map.getOrDefault(presum, 0)+1);
+        }
+
         return count;
     }
 }
